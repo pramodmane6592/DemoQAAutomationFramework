@@ -8,7 +8,7 @@ DemoQAAutomationFrameworkWithSpecflow contains 2 projects as below
 1.	AutoFramework - This is a class library project which contains all Selenium generic libraries, Config and Utilities.
    
   •	Base – Contains base classes like Base.cs, BasePage.cs, BaseStep.cs, TestInitializeHook.cs etc
-  •   Config – ConfigReader, Settings, TestSettings to read application like Env, UserName, Password
+  • Config – ConfigReader, Settings, TestSettings to read application like Env, UserName, Password
   •	Extensions – WebDriver and Web Element extension methods
   •	Helpers – Helper classes DataBaseHelpers, ExcelHelpers etc.
   
