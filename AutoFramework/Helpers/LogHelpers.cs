@@ -8,7 +8,7 @@ namespace EAAutoFramework.Helpers
     {
         //Global Declaration
         private static string _logFileName = string.Format("{0:yyyymmddhhmmss}", DateTime.Now);
-        private static StreamWriter _streamw = null;
+        //private static StreamWriter _streamw = null;
 
         //Create a file which can store the log information
         public static void CreateLogFile()

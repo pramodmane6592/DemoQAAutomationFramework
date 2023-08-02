@@ -11,7 +11,7 @@ namespace DemoQATestProject.Steps.Widgets
     [Binding]
     public class ToolTipSteps : BaseStep
     {
-        private readonly ParallelConfig _parallelConfig;
+        private new readonly ParallelConfig _parallelConfig;
 
         public ToolTipSteps(ParallelConfig parellelConfig) : base(parellelConfig)
         {

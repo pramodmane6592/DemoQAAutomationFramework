@@ -22,27 +22,27 @@ namespace DemoQATestProject.Pages
         }
 
         IWebElement ElementsSection => _parallelConfig.Driver.FindByXpath("//div[@class='category-cards']//h5[contains(text(),'Elements')]");
-        IWebElement LnkTextBox => _parallelConfig.Driver.FindByXpath("//span[ contains(text(),'Text Box')]");
-        IWebElement LnkCheckBox => _parallelConfig.Driver.FindByXpath("//span[ contains(text(),'Check Box')]");
-        IWebElement LnkWebTables => _parallelConfig.Driver.FindByXpath("//span[ contains(text(),'Web Tables')]");
-        IWebElement LnkButtons => _parallelConfig.Driver.FindByXpath("//span[ contains(text(),'Buttons')]");
+        IWebElement LnkTextBox => _parallelConfig.Driver.FindByXpath("//span[contains(text(),'Text Box')]");
+        IWebElement LnkCheckBox => _parallelConfig.Driver.FindByXpath("//span[contains(text(),'Check Box')]");
+        IWebElement LnkWebTables => _parallelConfig.Driver.FindByXpath("//span[contains(text(),'Web Tables')]");
+        IWebElement LnkButtons => _parallelConfig.Driver.FindByXpath("//span[contains(text(),'Buttons')]");
         IWebElement LnkUploadAndDownload => _parallelConfig.Driver.FindByXpath("//span[ contains(text(),'Upload and Download')]");
 
 
         IWebElement AlertsFrameWindowsSection => _parallelConfig.Driver.FindByXpath("//div[@class='category-cards']//h5[contains(text(),'Alerts, Frame & Windows')]");
-        IWebElement LnkWindows => _parallelConfig.Driver.FindByXpath("//span[ contains(text(),'Browser Windows')]");
-        IWebElement LnkAlerts => _parallelConfig.Driver.FindByXpath("//span[ contains(text(),'Alerts')]");
+        IWebElement LnkWindows => _parallelConfig.Driver.FindByXpath("//span[contains(text(),'Browser Windows')]");
+        IWebElement LnkAlerts => _parallelConfig.Driver.FindByXpath("//span[contains(text(),'Alerts')]");
 
         IWebElement WidgetsSection => _parallelConfig.Driver.FindByXpath("//div[@class='category-cards']//h5[contains(text(),'Widgets')]");
-        IWebElement LnkToolTips => _parallelConfig.Driver.FindByXpath("//span[ contains(text(),'Tool Tips')]");
+        IWebElement LnkToolTips => _parallelConfig.Driver.FindByXpath("//span[contains(text(),'Tool Tips')]");
 
 
         IWebElement InteractionsSection => _parallelConfig.Driver.FindByXpath("//div[@class='category-cards']//h5[contains(text(),'Interactions')]");
-        IWebElement LnkSortable => _parallelConfig.Driver.FindByXpath("//span[ contains(text(),'Sortable')]");
-        IWebElement LnkDroppable => _parallelConfig.Driver.FindByXpath("//span[ contains(text(),'Droppable')]");
+        IWebElement LnkSortable => _parallelConfig.Driver.FindByXpath("//span[contains(text(),'Sortable')]");
+        IWebElement LnkDroppable => _parallelConfig.Driver.FindByXpath("//span[contains(text(),'Droppable')]");
 
         IWebElement BookStoreSection => _parallelConfig.Driver.FindByXpath("//div[@class='category-cards']//h5[contains(text(),'Book Store Application')]");
-        IWebElement LnkLogin => _parallelConfig.Driver.FindByXpath("//span[ contains(text(),'Login')]");        
+        IWebElement LnkLogin => _parallelConfig.Driver.FindByXpath("//span[contains(text(),'Login')]");        
 
         internal TextBoxPage ClickTextBoxLink()
         {
@@ -71,13 +71,14 @@ namespace DemoQATestProject.Pages
             return new WebTablesPage(_parallelConfig, _scenarioContext);
         }
 
-        internal TextBoxPage ClickButtonsLink()
+        internal ButtonsPage ClickButtonsLink()
         {
             ScrollIntoView(ElementsSection);
             ElementsSection.Click();
             Thread.Sleep(1000);
+            ScrollIntoView(LnkButtons);
             LnkButtons.Click();
-            return new TextBoxPage(_parallelConfig, _scenarioContext);
+            return new ButtonsPage(_parallelConfig, _scenarioContext);
         }
 
         internal UploadDownloadPage ClickUploadAndDownloadLink()

@@ -11,7 +11,7 @@ namespace DemoQATestProject.Steps
     [Binding]
     public class BookStoreSteps : BaseStep
     {
-        private readonly ParallelConfig _parallelConfig;
+        private new readonly ParallelConfig _parallelConfig;
 
         public BookStoreSteps(ParallelConfig parellelConfig) : base(parellelConfig)
         {

@@ -11,7 +11,7 @@ namespace DemoQATestProject.Steps.AlertsFramesWindows
     [Binding]
     public class WindowsSteps : BaseStep
     {
-        private readonly ParallelConfig _parallelConfig;
+        private new readonly ParallelConfig _parallelConfig;
 
         public WindowsSteps(ParallelConfig parellelConfig) : base(parellelConfig)
         {

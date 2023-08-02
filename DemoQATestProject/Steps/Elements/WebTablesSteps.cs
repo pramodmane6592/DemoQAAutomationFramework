@@ -10,7 +10,7 @@ namespace DemoQATestProject.Steps.Elements
     [Binding]
     public class WebTablesSteps : BaseStep
     {
-        private readonly ParallelConfig _parallelConfig;
+        private new readonly ParallelConfig _parallelConfig;
 
         public WebTablesSteps(ParallelConfig parellelConfig) : base(parellelConfig)
         {

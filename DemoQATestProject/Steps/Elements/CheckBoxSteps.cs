@@ -10,7 +10,7 @@ namespace DemoQATestProject.Steps.Elements
     [Binding]
     public class CheckBoxSteps : BaseStep
     {
-        private readonly ParallelConfig _parallelConfig;
+        private new readonly ParallelConfig _parallelConfig;
 
         public CheckBoxSteps(ParallelConfig parellelConfig) : base(parellelConfig)
         {

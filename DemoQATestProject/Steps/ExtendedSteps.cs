@@ -9,7 +9,7 @@ namespace DemoQATestProject.Steps
     [Binding]
     internal class ExtendedSteps : BaseStep
     {
-        private readonly ParallelConfig _parallelConfig;
+        private new readonly ParallelConfig _parallelConfig;
         private readonly ScenarioContext _scenarioContext;
 
         public ExtendedSteps(ParallelConfig parallelConfig, ScenarioContext scenarioContext) : base(parallelConfig)
@@ -53,6 +53,8 @@ namespace DemoQATestProject.Steps
                 _parallelConfig.CurrentPage = _parallelConfig.CurrentPage.As<HomePage>().ClickDroppableLink();
             else if (linkName == "Login")
                 _parallelConfig.CurrentPage = _parallelConfig.CurrentPage.As<HomePage>().ClickBookStoreLoginLink();
+            else if (linkName == "Buttons")
+                _parallelConfig.CurrentPage = _parallelConfig.CurrentPage.As<HomePage>().ClickButtonsLink();
         }                
     }
 }

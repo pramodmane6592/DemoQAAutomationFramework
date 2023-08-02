@@ -11,7 +11,7 @@ namespace DemoQATestProject.Steps.Interactions
     [Binding]
     public class SortSteps : BaseStep
     {
-        private readonly ParallelConfig _parallelConfig;
+        private new readonly ParallelConfig _parallelConfig;
 
         public SortSteps(ParallelConfig parellelConfig) : base(parellelConfig)
         {

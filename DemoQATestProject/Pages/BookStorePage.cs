@@ -1,5 +1,6 @@
 ﻿using AutoFramework.Extensions;
 using EAAutoFramework.Base;
+using NUnit.Framework;
 using OpenQA.Selenium;
 using System;
 using System.Collections.Generic;
@@ -32,28 +33,35 @@ namespace DemoQATestProject.Pages
 
         public void RegisterNewUser()
         {
-            Random rnd= new Random();
-            int randomNo = rnd.Next(0, 1000);
+            try
+            {
+                Random rnd = new Random();
+                int randomNo = rnd.Next(0, 1000);
 
-            btnNewUser.Click();
-            txtFirstName.SendKeys("fname");
-            txtLastName.SendKeys("lname");
-            txtUserName.SendKeys("username" + randomNo);
-            txtPassword.SendKeys("Password" + "@" + randomNo);
+                btnNewUser.Click();
+                txtFirstName.SendKeys("fname");
+                txtLastName.SendKeys("lname");
+                txtUserName.SendKeys("username" + randomNo);
+                txtPassword.SendKeys("Password" + "@" + randomNo);
 
-            _scenarioContext.Set("username" + randomNo, "UserName");
-            _scenarioContext.Set("Password" + "@" + randomNo, "Password");
+                _scenarioContext.Set("username" + randomNo, "UserName");
+                _scenarioContext.Set("Password" + "@" + randomNo, "Password");
 
-            chkCaptcha.Click();
-            Thread.Sleep(3000);
+                chkCaptcha.Click();
+                Thread.Sleep(3000);
 
-            ScrollIntoView(btnRegister);
-            btnRegister.Click();
+                ScrollIntoView(btnRegister);
+                btnRegister.Click();
 
-            IAlert simpleAlert = _parallelConfig.Driver.SwitchTo().Alert();
-            simpleAlert.Accept();
+                IAlert simpleAlert = _parallelConfig.Driver.SwitchTo().Alert();
+                simpleAlert.Accept();
 
-            Login();
+                Login();
+            }
+            catch (Exception ex)
+            {
+                Assert.Fail("This test failing as there is captcha on new user register user page and Selenium Doesn't Support Catpcha Automation", ex.Message);
+            }            
         }
 
         public void Login()

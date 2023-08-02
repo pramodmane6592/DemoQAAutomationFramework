@@ -20,22 +20,22 @@ namespace DemoQATestProject.Features
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "3.1.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [NUnit.Framework.TestFixtureAttribute()]
-    [NUnit.Framework.DescriptionAttribute("WebTables")]
-    public partial class WebTablesFeature
+    [NUnit.Framework.DescriptionAttribute("Buttons")]
+    public partial class ButtonsFeature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
         
         private string[] _featureTags = ((string[])(null));
         
-#line 1 "WebTables.feature"
+#line 1 "Buttons.feature"
 #line hidden
         
         [NUnit.Framework.OneTimeSetUpAttribute()]
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "WebTables", null, ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Buttons", null, ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -74,14 +74,14 @@ namespace DemoQATestProject.Features
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("GoTo WebTables page and edit table data")]
-        [NUnit.Framework.CategoryAttribute("WebTables")]
-        public virtual void GoToWebTablesPageAndEditTableData()
+        [NUnit.Framework.DescriptionAttribute("Right click on button and get text displayed")]
+        [NUnit.Framework.CategoryAttribute("Buttons")]
+        public virtual void RightClickOnButtonAndGetTextDisplayed()
         {
             string[] tagsOfScenario = new string[] {
-                    "WebTables"};
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("GoTo WebTables page and edit table data", null, new string[] {
-                        "WebTables"});
+                    "Buttons"};
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Right click on button and get text displayed", null, new string[] {
+                        "Buttons"});
 #line 4
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -106,17 +106,52 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.Given("I navigate to Demo QA Website", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 6
- testRunner.Then("I click Web Tables link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("I click Buttons link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
-                            "FullName"});
-                table2.AddRow(new string[] {
-                            "Pramod"});
 #line 7
- testRunner.When("Get Web Tables first row and Edit Info", ((string)(null)), table2, "When ");
+ testRunner.Then("I click on Right Click Me button and get text displyed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Double click on button and get text displayed")]
+        [NUnit.Framework.CategoryAttribute("Buttons")]
+        public virtual void DoubleClickOnButtonAndGetTextDisplayed()
+        {
+            string[] tagsOfScenario = new string[] {
+                    "Buttons"};
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Double click on button and get text displayed", null, new string[] {
+                        "Buttons"});
 #line 10
- testRunner.Then("I Validate the results post edit", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            bool isScenarioIgnored = default(bool);
+            bool isFeatureIgnored = default(bool);
+            if ((tagsOfScenario != null))
+            {
+                isScenarioIgnored = tagsOfScenario.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((this._featureTags != null))
+            {
+                isFeatureIgnored = this._featureTags.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((isScenarioIgnored || isFeatureIgnored))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 11
+ testRunner.Given("I navigate to Demo QA Website", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+#line 12
+ testRunner.Then("I click Buttons link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 13
+ testRunner.Then("I click on Double Click Me button and get text displyed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();

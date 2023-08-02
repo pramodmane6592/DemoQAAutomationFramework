@@ -10,7 +10,7 @@ namespace DemoQATestProject.Steps.Interactions
     [Binding]
     public class DragAndDropSteps : BaseStep
     {
-        private readonly ParallelConfig _parallelConfig;
+        private new readonly ParallelConfig _parallelConfig;
 
         public DragAndDropSteps(ParallelConfig parellelConfig) : base(parellelConfig)
         {

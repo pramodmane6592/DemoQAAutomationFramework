@@ -8,7 +8,7 @@ namespace DemoQATestProject.Steps.Elements
     [Binding]
     public class TextBoxSteps : BaseStep
     {
-        private readonly ParallelConfig _parallelConfig;
+        private new readonly ParallelConfig _parallelConfig;
 
         public TextBoxSteps(ParallelConfig parellelConfig) : base(parellelConfig)
         {

@@ -28,7 +28,7 @@ namespace AutoFramework.Extensions
                     {
                         return condition(arg);
                     }
-                    catch (Exception e)
+                    catch (Exception)
                     {
                         return false;
                     }
@@ -58,7 +58,7 @@ namespace AutoFramework.Extensions
                     return remoteWebDriver.FindElementById(element);
                 }
             }
-            catch (Exception e)
+            catch (Exception)
             {
                 throw new ElementNotVisibleException($"Element not found : {element}");
             }
@@ -74,7 +74,7 @@ namespace AutoFramework.Extensions
                     return remoteWebDriver.FindElementByXPath(element);
                 }
             }
-            catch (Exception e)
+            catch (Exception)
             {
                 throw new ElementNotVisibleException($"Element not found : {element}");
             }
@@ -90,7 +90,7 @@ namespace AutoFramework.Extensions
                     return remoteWebDriver.FindElementByCssSelector(element);
                 }
             }
-            catch (Exception e)
+            catch (Exception)
             {
                 throw new ElementNotVisibleException($"Element not found : {element}");
             }
@@ -106,7 +106,7 @@ namespace AutoFramework.Extensions
                     return remoteWebDriver.FindElementByLinkText(element);
                 }
             }
-            catch (Exception e)
+            catch (Exception)
             {
                 throw new ElementNotVisibleException($"Element not found : {element}");
             }
