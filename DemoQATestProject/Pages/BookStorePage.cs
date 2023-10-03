@@ -66,13 +66,20 @@ namespace DemoQATestProject.Pages
 
         public void Login()
         {
-            ScrollIntoView(spanLogin);
-            spanLogin.Click();
+            try
+            {
+                ScrollIntoView(spanLogin);
+                spanLogin.Click();
 
-            txtUserName.SendKeys(_scenarioContext.Get<string>("UserName"));
-            txtPassword.SendKeys(_scenarioContext.Get<string>("Password"));
+                txtUserName.SendKeys(_scenarioContext.Get<string>("UserName"));
+                txtPassword.SendKeys(_scenarioContext.Get<string>("Password"));
 
-            btnLogin.Click();
+                btnLogin.Click();
+            }
+            catch (Exception ex)
+            {
+                Assert.Fail("This test failing as there is captcha on new user register user page and Selenium Doesn't Support Catpcha Automation", ex.Message);
+            }            
         }
 
         public void ScrollIntoView(IWebElement element)

@@ -7,6 +7,7 @@ using AventStack.ExtentReports.Reporter;
 using AventStack.ExtentReports.Gherkin.Model;
 using NUnit.Framework;
 //Same parallel
+//comment out below line of code disable parallel test execution
 [assembly: Parallelizable(ParallelScope.Fixtures)]
 
 namespace CrossPlatformEATest.Hooks
@@ -52,6 +53,7 @@ namespace CrossPlatformEATest.Hooks
             else if (_scenarioContext.TestError != null)
             {
                 //screenshot in the Base64 format
+                //capture screenshot if step is failed
                 var mediaEntity = _parallelConfig.CaptureScreenshotAndReturnModel(_scenarioContext.ScenarioInfo.Title.Trim());
 
                 if (stepType == "Given")
