@@ -20,6 +20,7 @@ namespace DemoQATestProject.Steps
 
         public void NaviateSite()
         {
+            // Navigate to application under AUT
             _parallelConfig.Driver.Navigate().GoToUrl(Settings.AUT);
         }
 
@@ -55,6 +56,6 @@ namespace DemoQATestProject.Steps
                 _parallelConfig.CurrentPage = _parallelConfig.CurrentPage.As<HomePage>().ClickBookStoreLoginLink();
             else if (linkName == "Buttons")
                 _parallelConfig.CurrentPage = _parallelConfig.CurrentPage.As<HomePage>().ClickButtonsLink();
-        }                
+        }
     }
 }
